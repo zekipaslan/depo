@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form>
+  <select id="mySelect">
+    <option selected disabled>Meyveler</option>
+    <option>3</option>
+    <option>1994</option>
+    <option>Pineapple</option>
+    <option>6</option>
+  </select>
+</form>
+
+<p>Click the button to display the text of the first option in the drop-down list.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+
+<script>
+var otuzbir = [1,3,5,7,8,10,12];
+var otuz = [4,6,9,11];
+var artik=[2]
+  var res = "";
+var n = fruits.includes("Mango");
+function myFunction() {
+  var x = document.getElementById("mySelect").options.selectedIndex;
+  document.getElementById("demo").innerHTML = x;
+  res=document.getElementById("mySelect").options[x].text;
+  document.getElementById("demo2").innerHTML = res;
+document.getElementById("demo3").innerHTML= Number.isInteger(Number(res)) + ": 123<br>";
+  
+}
+</script>
+
+</body>
+</html>

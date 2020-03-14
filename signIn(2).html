@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+
+  <ul class="w3-ul w3-card-4 w3-round-xlarge">
+    <li class="w3-bar">
+    <p class="w3-bar-item "> Cinsiyetiniz..? </p>
+      <img id="erk" src="img_avatar2.png" class="w3-button w3-border-red w3-bar-item w3-circle" onclick="myfunction()" style="width:85px"> 
+      <img id="kad" src="img_avatar6.png" class="w3-button w3-bar-item w3-circle" style="width:85px">
+    </li>
+
+    <li class="w3-bar">
+     
+    </li>
+
+    <li class="w3-bar">
+      
+    </li>
+  </ul>
+<script>
+function myfunction() {
+
+var x=documant.getElementById("erk");
+if (x.className.indexOf("w3-border") == -1) {
+    x.className += " w3-border";
+  } else {
+    x.className = x.className.replace(" w3-border", "");
+  }}
+</script>
+
+</body>
+</html>

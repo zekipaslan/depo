@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript break</h2>
+
+<p id="demo"></p>
+
+<script>
+var cars = [
+  {type:"Volvo", year:2016},
+  {type:"Saab", year:2001},
+  {type:"BMW", year:2010}
+];
+var text = "";
+
+list: {
+  text += cars[0].type + "<br>"; 
+  text += cars[1].type + "<br>"; 
+  break list;
+  text += cars[2].type + "<br>"; 
+  text += cars[3].type + "<br>"; 
+}
+
+document.getElementById("demo").innerHTML = text;
+</script>
+
+</body>
+</html>

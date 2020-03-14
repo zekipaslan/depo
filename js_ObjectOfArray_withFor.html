@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Creating a JavaScript Object.</p>
+
+<p id="demo"></p>
+
+<script>
+
+var txt = "";
+var person = [{firstName :"John",lastName:"Doe",age:50, eyeColor:"blue"
+},{firstName :"remzi", lastName:"andaval",age: 40,eyeColor: "black"}];
+ 
+  var x; //For döngüsünü parantez içine almayı UNUTMA..!! 
+  for (x in person) {
+txt += person[x].firstName + " " + person[x].lastName + "<br>" ;
+ 
+}
+document.getElementById("demo").innerHTML=txt;
+</script>
+
+</body>
+</html>

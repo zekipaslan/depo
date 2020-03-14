@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="C:\Users\WWW\Desktop\Programs\HTML\resim\" target="_self">
+</head>
+
+<body>
+
+<h2>What Can JavaScript Do?</h2>
+<img id="myImage" onclick="changeImage()" src="lightoff.jpg" 
+width="160" height="180">
+
+<p>Click the light bulb to turn on/off the light.</p>
+
+<script>
+function changeImage() {
+    var image = document.getElementById('myImage');
+    if (image.src.match("lightoff")) {
+        image.src = "lighton.jpg";
+    } else {
+        image.src = "lightoff.jpg";
+    }
+}
+</script>
+
+</body>
+</html>

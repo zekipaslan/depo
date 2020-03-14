@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body onload="myDate(s=32)">
+<select  id="gun"  name="option" style="width: 33%" title="Bu Alanı Boş Bırakmayın" required >
+     <option  value="" disabled selected>Gün</option>
+     </select>
+<p>Click the button to display the date after changing the day of the month.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+ var gi = document.getElementById("gun").options.selectedIndex; 
+    var g= document.getElementById("gun").options[gi].text;     
+    var d = new Date();
+         d.setUTCDate(g-1);
+         d.setUTCFullYear(2000);
+         d.setUTCMonth(4);
+          var n = d.toLocaleDateString();
+ 
+  document.getElementById("demo").innerHTML = n;
+}
+
+function myDate(s){
+       
+        var x = document.getElementById("gun");
+        
+        var z = x.options.length;
+        for (i=z;i < s;i++){
+         var c = document.createElement("option"); 
+            c.text=i;
+            x.options.add(c,i);
+        }
+    }
+</script>
+
+</body>
+</html>

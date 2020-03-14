@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<style>
+.tooltip {
+position:relative;
+display:inline;
+border:1px solid red;
+}
+ .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #73AD21;
+  opacity:0.9;
+  color: #fff;
+  text-align: top;
+  border-radius: 6px;
+  padding: 5px 0;
+  border:1px solid red;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom:0;
+  left:110%;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility:visible;
+ 
+}
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -5px;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color:   transparent  red  transparent  transparent ;
+}
+</style>
+<body style="text-align:center;">
+
+<p style=" text-align: justify;">Note that the position of the tooltip text isn't very good. Go back to the tutorial and continue reading on how to position the tooltip in a desirable way.</p>
+
+
+<span class="tooltip">Hover over me
+  <span class="tooltiptext">Tooltip text</span>
+</span>
+<p style=" text-align: justify;">Note that the position of the tooltip text isn't very good. Go back to the tutorial and continue reading on how to position the tooltip in a desirable way.</p>
+
+</body>
+</html>

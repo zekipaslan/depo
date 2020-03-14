@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<div class="w3-container">
+  <h2>Toggle Show/Hide</h2>
+  <p>Click on the button to show/hide a paragraph.</p>
+  <button onclick="myFunction()" class="w3-btn w3-black">Toggle hide and show</button>
+
+  <p>Paragraph 1.</p>
+  
+  <img id="erk" src="img_avatar3.png" onclick="myFunction()"  alt="Avatar" class="w3-circle w3-border-red" style="width:65px;cursor:pointer">
+  <img id="Demo" src="img_avatar6.png" class="w3-circle " style="width:85px;cursor:pointer">
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("Demo");
+  if (x.className.indexOf("w3-border") == -1) {
+    x.className += " w3-border w3-border-red";
+  } else {
+    x.className = x.className.replace(" w3-border w3-border-red", "");
+  }
+}
+</script>
+
+</body>
+</html>

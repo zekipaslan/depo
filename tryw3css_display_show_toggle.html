@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<div class="w3-container">
+  <h2>Toggle Show/Hide</h2>
+  <p>Click on the button to show/hide a paragraph.</p>
+  <button onclick="myFunction()" class="w3-btn w3-black">Toggle hide and show</button>
+
+  <p>Paragraph 1.</p>
+  <div id="Demo" class="w3-panel w3-hide w3-leftbar w3-sand w3-xxlarge w3-serif">
+    <p><i>"Make it as simple as possible, but not simpler."</i></p>
+  </div>
+</div>
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("Demo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>

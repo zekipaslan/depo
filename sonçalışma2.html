@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Array includes()</h1>
+
+<p>Check if the fruit array contains "Mango":</p>
+
+<p id="demo"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p><strong>Note:</strong> The includes method is not supported in Edge 13 (and earlier versions).</p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+var n = fruits.includes("Mango4");
+var son=8;
+var odd1 = [2,6];
+var even1 =[0,4,8];
+var inodd=odd1.includes(son);
+var ineven=even1.includes(son);
+document.getElementById("demo").innerHTML = n;
+document.getElementById("demo2").innerHTML = inodd;
+document.getElementById("demo3").innerHTML = ineven;
+</script>
+
+</body>
+</html>

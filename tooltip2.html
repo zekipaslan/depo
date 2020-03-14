@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.tt {position:relative;
+padding:10px 0;}
+ .muhteva {
+  position:absolute;
+  /*visibility: hidden;*/
+  display:none;
+  padding: 20px;
+  width: 320px;
+  background-color: #73AD21;
+ 
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+ 
+  /*border:1px solid red;
+  /* Position the tooltip */
+  z-index: 1;
+ top:15px;
+ opacity:0.9;
+/*transition: opacity 5s;*/
+  
+}
+.muhteva::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 45%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color:   transparent  transparent red transparent   ;
+}
+div:hover .muhteva {
+  /*visibility: visible;*/
+  display:block;
+
+}
+</style>
+</head>
+<body>
+
+<div class="tt">Hover over me to show the p element
+  <p class="muhteva">Tada! Here I am!</p>
+</div>
+<div>Hover over me to show the p element
+  <span>Tada! Here I am!</span>
+</div>
+</body>
+</html>

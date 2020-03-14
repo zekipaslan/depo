@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<title>Customers</title>
+<link rel="stylesheet" href="style.css">
+<script src="/appml/2.0.3/appml.js"></script>
+<body>
+<ul id="demo">
+  <li>Coffee</li>
+  <li>Tea</li>
+</ul>
+
+
+<script>
+var myObj, textnode,node, myArr, len, i, txt = "";
+
+// Create an AppML object and fetch the data
+myObj = new AppML();
+myObj.dataSource = "customers.php";
+myObj.getData();
+
+// Locate the data records
+myArr = myObj.data.records;
+len = myArr.length;
+
+// Display the records
+for (i = 0; i < len; i++) {
+    txt += myArr[i].CustomerName + "<br>";
+    node = document.createElement("LI");
+    textnode = document.createTextNode(myArr[i].CustomerName);
+    node.appendChild(textnode);
+  document.getElementById("demo").appendChild(node);
+}
+
+
+</script>
+
+</body>
+</html>

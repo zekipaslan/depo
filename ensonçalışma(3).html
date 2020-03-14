@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form>
+  <select id="mySelect">
+    <option selected disabled>Meyveler</option>
+    <option>3</option>
+    <option>1988</option>
+    <option>Pineapple</option>
+    <option>6</option>
+  </select>
+</form>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+<br>
+<p id="digit1"></p>
+<p id="digit2"></p>
+<p id="digit3"></p>
+<p id="digit4"></p>
+<p id="sum"></p>
+<p id="kalan"></p>
+<p id="OE"></p>
+<p id="odd"></p>
+<p id="even"></p>
+<script>
+
+var otuzbir = [1,3,5,7,8,10,12];
+var otuz = [4,6,9,11];
+var artik=[2]
+var sum,z,son;
+  var res = "";
+var n = fruits.includes("Mango");
+
+function myFunction() {
+  var odd1 = [2,6];
+  var even1 =[0,4,8];
+  var x = document.getElementById("mySelect").options.selectedIndex;
+  document.getElementById("demo").innerHTML = x +"index";
+  res=document.getElementById("mySelect").options[x].text;
+  document.getElementById("digit1").innerHTML = (res[0]);
+  document.getElementById("digit2").innerHTML = (res[1]);
+   document.getElementById("digit3").innerHTML = (res[2]);
+   document.getElementById("digit4").innerHTML = (res[3]);
+   son=Number(res[3]);
+//document.getElementById("demo3").innerHTML= Number.isInteger(Number(res)) + ": 123<br>";
+  sum= Number(res[0])+ Number(res[1])+ Number(res[2])+ Number(res[3]);
+  
+  var inodd=odd1.includes(son);
+  var ineven=even1.includes(son);
+  document.getElementById("odd").innerHTML =inodd +" d/y"
+  document.getElementById("even").innerHTML =ineven +" d/y"
+  document.getElementById("sum").innerHTML = sum + " Toplam";
+  z=sum % 2;
+  document.getElementById("kalan").innerHTML = z + " Kalan";
+  if (z==0) {
+           if (ineven == true) {
+      document.getElementById("OE").innerHTML = "Bu sene Aralık 29 çeker";
+           } else {
+      document.getElementById("OE").innerHTML = "Bu sene Aralık 28 çeker";
+           }
+            }
+            else { if (inodd == true) {document.getElementById("OE").innerHTML = "Bu sene Aralık 29 çeker"; }
+         else { document.getElementById("OE").innerHTML = "Bu sene Aralık 28 çeker";}   
+            }
+ 
+
+}
+</script>
+
+</body>
+</html>

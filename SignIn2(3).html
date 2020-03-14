@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<body>
+
+<div class="w3-container">
+  <h2>Toggle Show/Hide</h2>
+  <p>Click on the button to show/hide a paragraph.</p>
+  <button  onclick="w3.hide('h2')" class="w3-btn w3-black">Toggle hide and show</button>
+  <p onclick="w3.toggleShow('h3')">Dokundur</p>
+  <h3> Bu satırı bi göster bi kaybet </h3>
+  
+  <img id="erk" src="img_avatar3.png" onclick="myfunctionM()"  alt="Avatar" class="w3-circle w3-border-orange" style="width:85px;cursor:pointer">
+  <img id="kad" src="img_avatar6.png" onclick="myfunctionF()" class="w3-circle w3-border-orange" style="width:85px;cursor:pointer">
+</div>
+
+<script>
+function myfunctionM(){
+w3.addStyle('#erk','border','2px solid');
+w3.addStyle('#kad','border','none')
+}
+function myfunctionF(){
+w3.addStyle('#kad','border','2px solid');
+w3.addStyle('#erk','border','none')
+}
+</script>
+</body>
+</html>
